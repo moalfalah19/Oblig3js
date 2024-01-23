@@ -8,7 +8,5 @@ CREATE TABLE Kunde
     epost VARCHAR(255) NOT NULL,
     telefonnr VARCHAR(255) NOT NULL,
 
-
-
     PRIMARY KEY (id)
 );

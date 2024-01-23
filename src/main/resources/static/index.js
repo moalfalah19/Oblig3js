@@ -43,25 +43,18 @@ function kjop() {
         }
     }
     else {
-
-
         document.getElementById("velgFilmHer").value = "";
         document.getElementById("antall").value = "";
         document.getElementById("navn").value = "";
         document.getElementById("navn1").value = "";
         document.getElementById("tlnr").value = "";
         document.getElementById("email").value = "";
-
-
         $.post("/lagre", kunde, function (){
             hentAlle();
         });
 
         feilmelding();
-
     }
-
-
 }
 function hentAlle() {
     $.get("/hentAlle", function (data) {
@@ -76,22 +69,15 @@ function hentAlle() {
                 + kunde.etternavn + "</td><td>" + kunde.telefonnr + "</td><td>" + kunde.epost + "</td>"
             ut += "</tr>";
         }
-
         ut += "</table>";
         $("#uttt").html(ut);
-
     }
 }
-
-
 function nullstil() {
-
     $.get("/nullstil", function (){
         $("#uttt").html(" ")
     });
     feilmelding();
-
-
 }
 
 
